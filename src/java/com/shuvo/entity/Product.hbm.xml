@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 23, 2018 11:23:12 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.shuvo.entity.Product" table="product" catalog="mydatabase" optimistic-lock="version">
+        <id name="productId" type="java.lang.Integer">
+            <column name="ProductId" />
+            <generator class="identity" />
+        </id>
+        <property name="productName" type="string">
+            <column name="ProductName" length="100" not-null="true" />
+        </property>
+        <property name="productQuantity" type="int">
+            <column name="ProductQuantity" not-null="true" />
+        </property>
+        <property name="productPrice" type="double">
+            <column name="ProductPrice" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
